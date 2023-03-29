@@ -4,7 +4,7 @@
     <table id="words" class="ui celled compact table">
       <thead>
         <tr>
-          <th>Englis</th>
+          <th>English</th>
           <th>German</th>
           <th colspan="3"></th>
         </tr>
