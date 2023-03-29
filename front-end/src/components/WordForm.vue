@@ -23,6 +23,12 @@ export default {
     word: {
       type: Object,
       required: false,
+      default: () => {
+        return {
+          english: "",
+          german: "",
+        };
+      },
     },
   },
   data() {
