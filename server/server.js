@@ -7,7 +7,7 @@ const routes = require("./api/routes/vocabRoutes");
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/vocab-builder", {
-  useNewUrlParser: true,
+  useNewUrlParser: true,  
 });
 
 const port = process.env.PORT || 3000;
