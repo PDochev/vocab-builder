@@ -28,7 +28,7 @@
         <td
           width="75"
           class="center aligned"
-          @click.prevent="($event) => onDestroy(word._id)"
+          @click.prevent="onDestroy(word._id)"
         >
           <a :href="`/words/${word._id}`">Delete</a>
         </td>
