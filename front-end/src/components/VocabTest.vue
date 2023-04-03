@@ -22,6 +22,16 @@
           autocomplete="off"
         />
       </div>
+      <div class="ui labeled input fluid">
+        <div class="ui label"><i class="bulgaria flag"></i> Bulgaria</div>
+        <input
+          type="text"
+          placeholder="Enter word..."
+          v-model="bulgarian"
+          :disabled="testOver"
+          autocomplete="off"
+        />
+      </div>
 
       <button class="positive ui button" :disabled="testOver">Submit</button>
     </form>
@@ -48,6 +58,7 @@ export default {
       result: "",
       resultClass: "",
       english: "",
+      bulgarian: "",
       score: 0,
       testOver: false,
     };
@@ -59,7 +70,10 @@ export default {
   },
   methods: {
     onSubmit: function () {
-      if (this.english === this.currWord.english) {
+      if (
+        this.english === this.currWord.english &&
+        this.bulgarian === this.currWord.bulgarian
+      ) {
         this.flash("Correct!", "success", { timeout: 1000 });
         this.score += 1;
       } else {
@@ -68,6 +82,7 @@ export default {
       }
 
       this.english = "";
+      this.bulgarian = "";
       this.randWords.shift();
 
       if (this.randWords.length === 0) {

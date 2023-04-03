@@ -11,6 +11,10 @@ const VocabSchema = new Schema(
       type: String,
       required: "German word cannot be blank",
     },
+    bulgarian: {
+      type: String,
+      required: "Bulgarian word cannot be blank",
+    },
   },
   { collection: "vocab" }
 );
